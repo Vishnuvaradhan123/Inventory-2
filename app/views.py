@@ -15,4 +15,6 @@ def home(request):
     "TRTR" 
     "GRT" 
     "GTR"
-    "yyyy")
+    "yyyy"
+    "ZZZZ"
+    "XXX")
