@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: Inventory-live
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r myproject/requirements.txt
+    startCommand: gunicorn --chdir myproject myproject.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"
